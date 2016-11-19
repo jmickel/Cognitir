@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BOOM</title>
+		
+		<!--this links to jQuery-->
+		￼<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!--this links to bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
+		<!--this links to jQuery Bootstrap-->
+		￼<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			<style>
+				h1 {
+					color: violet;
+				}
+				/* this is a CSS comment */
+				body {
+					background-color: aqua
+				}
+				#FeatureList {
+					/* makes the list in petite caps */
+					font-variant-caps: petite-caps;
+				}
+				.highlight {
+					background-color: yellow
+				}
+			</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="jumbotron">
+					<h1> Pop Explosion! </h1>
+					<p class="lead"> Be careful...curiosity killed the cat</p>
+					<p>
+						<a class="btn btn-lg btn-success" href="#FeatureList"
+						role="button">See More</a>
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<h1>
+			<!--This is an HTML comment-->
+				This is a header
+			</h1>
+			
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+        		<div class="item active">
+             		I am the first element in the carousel.
+		       </div>
+		       <div class="item">
+		             I am the second element in the carousel.
+		       </div>
+		    </div>
+		</div>
+
+
+			<div class="row">
+				<div class="col-sm-12">
+					<p>
+						This <strong>is</strong> a paragraph
+					</p>
+					<a href="http://www.google.com" target="_blank">
+						I will open Google in a new tab.
+					</a>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-6">
+					<p>
+						<img src="https://static.matterport.com/mp_cms/media/filer_public/72/2b/722bc90e-037f-4021-a15b-5ac4763f27fb/kapow_logo.png">
+					</p>
+				</div>
+				<div class="col-sm-6"
+					<ul style="list-style-type: square;">
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+						<li>Item 4</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4">
+					<p>
+						Our Product has <span style="color:red"> state-of-the-art</span> features.
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<ul id="FeatureList";>
+					<li>Whiz!</li>
+					<li>Bang!</li>
+					<li>Pow!</li>
+					<li>Yowsers!</li>
+					</ul>
+				</div>
+				
+				<div class="col-sm-4">
+					<p id="myParagraph"> Tinder burning... burning... Don't Click!! </p>
+					<button type="button"
+						onclick="document.getElementById('myParagraph').innerHTML = 'Seriously? <br> WHOA -- Explosion!!!'">Click
+					</button>
+					</p>
+				</div>
+			
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class=row>
+				<div class="col-sm-12">
+					<br>
+					<br>
+					<br>
+					<br>
+					<p> Be honest, how many times did you click the button above?</p>
+					<input id="numericInput" type="number">
+					<p id="result"> </p>
+					<button type="button" onclick="testInput()">Submit</button> 
+					<script>
+						function testInput() {
+						// Create variable to store test result
+							var text;
+							// Get the value of the input field with id="numericInput"
+							var x = document.getElementById("numericInput").value; 
+							if (isNaN(x) || x < 0 || x > 99) {
+							                text = "No, really...";
+							           } else {
+							                text = "That's enough for now, don't you think?";
+							           }
+						         	// Display result
+									document.getElementById("result").innerHTML = text; }
+					</script>
+
+					<p id="prettyParagraph"> 
+						Brought to you by Friends of Andy Warhol
+						<button type="button" onclick="applyStyling()">Make it pretty!</button>
+					</p>
+					<script>
+					     function applyStyling() {
+					     	var paragraph = document.getElementById("prettyParagraph");
+					     	paragraph.style.color = "magenta";
+					     	paragraph.style.fontSize = "29px";
+					     	paragraph.style.fontWeight = "700";
+					     	paragraph.style.font = "script";
+					} 
+					</script>
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$("myCarousel").carousel({interval: 4000})
+						});
+					</script>
+					<script>
+						var result = 5 + 3;
+						alert ("5 + 3 is " + result);
+					</script>
+					<script>
+					
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
